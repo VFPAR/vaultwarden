@@ -515,7 +515,7 @@ pub async fn send_invite_confirmed(address: &str, org_name: &str) -> EmptyResult
 }
 
 pub async fn send_new_device_logged_in(address: &str, ip: &str, dt: &NaiveDateTime, device: &Device) -> EmptyResult {
-    let fmt = "%A, %B %_d, %Y at %r %Z";
+    let fmt = "%d/%m/%Y às %H:%M:%S (%Z)";
     let (subject, body_html, body_text) = get_text(
         "email/new_device_logged_in",
         json!({
@@ -532,7 +532,7 @@ pub async fn send_new_device_logged_in(address: &str, ip: &str, dt: &NaiveDateTi
 }
 
 pub async fn send_recover_twofactor(address: &str, ip: &str, dt: &NaiveDateTime) -> EmptyResult {
-    let fmt = "%A, %B %_d, %Y at %r %Z";
+    let fmt = "%d/%m/%Y às %H:%M:%S (%Z)";
     let (subject, body_html, body_text) = get_text(
         "email/recover_twofactor",
         json!({
@@ -553,7 +553,7 @@ pub async fn send_incomplete_2fa_login(
     device_name: &str,
     device_type: &str,
 ) -> EmptyResult {
-    let fmt = "%A, %B %_d, %Y at %r %Z";
+    let fmt = "%d/%m/%Y às %H:%M:%S (%Z)";
     let (subject, body_html, body_text) = get_text(
         "email/incomplete_2fa_login",
         json!({

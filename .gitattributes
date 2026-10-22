@@ -1,2 +1,5 @@
 # Ignore vendored scripts in GitHub stats
 src/static/scripts/* linguist-vendored
+
+# Scripts executados dentro do container precisam de LF
+*.sh text eol=lf

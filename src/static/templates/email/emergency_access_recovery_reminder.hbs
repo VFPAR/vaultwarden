@@ -1,6 +1,8 @@
-Emergency access request by {{{grantee_name}}} is pending
+Solicitação de acesso de emergência de {{{grantee_name}}} pendente
 <!---------------->
-{{grantee_name}} has a pending emergency access request to {{atype}} your account. You may login on the web vault ({{url}}) and manually approve or reject this request.
+Prezado(a) usuário(a),
 
-If you do nothing, the request will automatically be approved after {{days_left}} day(s).
+{{grantee_name}} possui uma solicitação pendente de acesso de emergência à sua conta, na modalidade {{#if (eq atype "View")}}“Visualização”{{else}}“Assumir a conta”{{/if}}. Você pode acessar o VF Guard ({{url}}) para aprovar ou recusar manualmente esta solicitação.
+
+Atenção: caso nenhuma ação seja tomada, a solicitação será aprovada automaticamente após {{days_left}} dia(s).
 {{> email/email_footer_text }}

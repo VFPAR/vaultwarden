@@ -5,6 +5,8 @@
 !.git
 !docker/healthcheck.sh
 !docker/start.sh
+!branding/web-vault
+!branding/rebrand-web-vault.sh
 !macros
 !migrations
 !src

@@ -152,6 +152,10 @@ WORKDIR /
 COPY docker/healthcheck.sh docker/start.sh /
 
 COPY --from=vault /web-vault ./web-vault
+# Identidade visual PAR Participações aplicada sobre o web vault
+COPY branding/web-vault/ ./web-vault/
+COPY branding/rebrand-web-vault.sh /tmp/
+RUN sh /tmp/rebrand-web-vault.sh ./web-vault && rm /tmp/rebrand-web-vault.sh
 COPY --from=build /app/target/final/vaultwarden .
 
 HEALTHCHECK --interval=60s --timeout=10s CMD ["/healthcheck.sh"]

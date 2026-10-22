@@ -1,6 +1,8 @@
-Emergency access request by {{{grantee_name}}} initiated
+Solicitação de acesso de emergência iniciada por {{{grantee_name}}}
 <!---------------->
-{{grantee_name}} has initiated an emergency access request to {{atype}} your account. You may login on the web vault ({{url}}) and manually approve or reject this request.
+Prezado(a) usuário(a),
 
-If you do nothing, the request will automatically be approved after {{wait_time_days}} day(s).
+{{grantee_name}} iniciou uma solicitação de acesso de emergência à sua conta, na modalidade {{#if (eq atype "View")}}“Visualização”{{else}}“Assumir a conta”{{/if}}. Você pode acessar o VF Guard ({{url}}) para aprovar ou recusar manualmente esta solicitação.
+
+Atenção: caso nenhuma ação seja tomada, a solicitação será aprovada automaticamente após {{wait_time_days}} dia(s).
 {{> email/email_footer_text }}
